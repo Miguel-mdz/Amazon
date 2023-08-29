@@ -1,0 +1,424 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+@mixin amazon()
+       color: white
+       font-size: 11px
+       display: flex
+       
+$font: 'Roboto'
+header
+    background: rgb(28, 46, 63)
+    
+    
+
+header .contenedor
+    display: flex
+    align-items: center
+    justify-content: space-between
+    
+
+nav
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    margin: 9px
+
+.busqueda
+    height: 50px
+    width: 83%
+    border: none
+    border-radius: 6px 0 0 6px
+    padding: 0 3px
+    margin-left: 10px
+    margin-bottom: 10px
+    
+ 
+    
+.search
+    height: 50px
+    width: 40px
+    background-color: rgb(255, 193, 99)
+    border: none
+    border-radius: 4px
+a
+    font-size: 20px
+#tags
+        display: flex
+        overflow-x: scroll
+        justify-content: space-between
+        a
+            font-size: 14px   
+            font-family: $font
+            text-decoration: none
+            color: white
+            margin: 4px 13px 8px 10px
+            padding: 6px 0
+            
+p
+    font-size: 11px
+    margin-top: 3px
+    margin-right: 3px
+    color: white
+    font-family: $font
+
+#boton-close
+    position: absolute 
+    display: none
+    z-index: 3
+
+#boton-menu
+   position: absolute 
+   display: none
+
+#boton-menu:checked ~ aside 
+    display: flex
+    transition: all .6s ease
+#boton-menu:checked ~  .open
+    display: none
+
+#boton-menu:checked ~  .close
+    display: flex
+#boton-menu:checked ~ #background
+    display: flex
+#boton-menu:checked ~ #productos1 img
+    display: flex
+
+    
+
+
+#boton-close:checked ~ aside 
+    display: none
+#boton-close:checked ~  #background
+    display: none
+#boton-close:checked ~ .close
+    display: none
+#boton-close:checked ~ .open
+    display: flex
+
+    
+
+.open
+    position: absolute
+    top: 9px
+    left: 13px
+    z-index: 1
+    font-size: 23px
+    display: flex
+
+.close
+    position: absolute
+    top: 27px
+    left: 320px
+    z-index: 3
+    font-size: 30px
+    display: none
+
+.logo
+    height: 25px
+    width: 80px
+    margin-right: 40px
+    
+
+.user
+    margin-right: 37px
+
+.car
+    margin-right: 6px
+
+#tags::-webkit-scrollbar
+    width: 7px
+
+.location
+    color: white
+    text-decoration: none
+    font-size: 14px
+    font-family: $font
+    background: rgb(52, 73, 92)
+    width: 100%
+    height: 40px
+    align-items: center
+    justify-content: center
+    i
+        font-size: 16px
+    a
+        margin: 10px
+        
+
+#location
+    padding:10px
+        
+aside
+    position: absolute
+    height: 100vh
+    width: 80%   
+    margin: 0 auto   
+    background: white
+    color: black
+    display: none 
+    flex-direction: column
+    font-family: $font
+    z-index: 2
+    
+    .home
+        height: 30px
+        margin-left: 60px  
+    h4
+        margin-left: 17px
+        margin-top: 14px
+    li
+        padding: 0
+             
+        
+    div .menu-user-explorar
+        display: flex
+        flex-direction: column
+        .exp
+            color: white
+            padding-bottom: 13px
+            margin-left: 10px
+            font-size: 18px
+            span
+                font-size: 28px
+
+    a //aside
+        text-decoration: none
+        margin: 10px 15px 0 0
+        color: black
+        font-family: $font
+        list-style: none
+    .menu-user-explorar
+        background: rgb(40, 62, 82)
+        display: flex
+    .user
+        display: flex
+        justify-content: space-between
+        align-items: center
+        p
+            margin-left: 180px
+            font-size: 14px
+.aside-item
+    display: flex
+    align-items: center
+.sub-li
+    
+    margin-top: 10px
+    list-style: none
+    font-size: 15px
+    padding: 15px 15px 15px 18px
+
+
+.sub-li:hover
+    cursor: pointer
+    background-color: rgb(218, 216, 216)
+hr
+    border: 2px solid rgb(218, 216, 216)
+
+
+#background
+    position: absolute
+    background: rgb(0,0,0,0.8) 
+    height: 100vh
+    width: 100%
+    display: none
+    z-index: 1
+
+//seccion de productos
+
+
+.productos
+    height: 74vh
+    background: linear-gradient(#f3f2eb46, #39393b46)
+#productos
+    position: absolute
+    top: 400px  
+    width: 100%
+    
+   
+#productos1
+    display: flex
+    overflow-x: scroll
+    
+    position: relative
+    img
+        height: 40vh
+        width: 100%
+
+#productos2
+    overflow-x: scroll
+    display: flex  
+    gap: 8px
+    padding-left: 7px
+    width: 100%
+
+#productos2 img
+    height: 200px
+    width: 150px
+    box-shadow: .1px .1px  .1px .1px  black
+    border-radius: 8px
+    margin-bottom: 5px
+    
+
+#productos2::-webkit-scrollbar
+    width: 7px 
+#productos1::-webkit-scrollbar
+    width: 7px 
+#inicio
+    margin: 10px 5px 8px 13px
+    padding: 14px
+    width: 92%
+    
+    border-radius: 10px
+    border: none
+    background: rgb(250, 222, 62)
+    
+    a
+        text-decoration: none
+        color: black
+
+.inicio
+    position: relative
+    h4
+        margin: 7px 0 0 18px
+        font-family: $font
+        font-size: 20px
+        color: black
+
+.crear-cuenta
+   font-size: 15px
+   padding: 12px 14px
+   font-family: $font
+.ofertas
+    display: flex
+    flex-direction: row
+    height: 60vh
+    .oferta
+        margin-left: 40px
+        font-size: 17px
+        font-family: $font
+        color: red
+        span
+            background: red
+            color: white
+            padding: 7px
+            border-radius: 4px
+            font-family: $font
+    .ofertas-img
+        height: 140px
+        margin: 25px
+    
+.shoe1
+    display: flex
+    flex-direction: row
+    height: 60vh  
+    .shoes
+        margin-left: 16px
+        font-size: 17px
+        font-family: $font
+    .shoes-img
+        height: 170px
+        width: 160px
+        margin: 20px 0 0px 15px
+        border-radius: 4px
+.more
+    font-size: 16px
+    font-family: $font
+    text-decoration: none
+    margin-left: 15px 
+.shoe
+    display: flex
+    flex-direction: row
+    height: 66vh  
+    .shoes
+        margin-left: 16px
+        font-size: 17px
+        font-family: $font
+    .shoes-img
+        height: 170px
+        width: 160px
+        margin: 20px 0 0px 15px
+        border-radius: 4px
+.more
+    font-size: 16px
+    font-family: $font
+    text-decoration: none
+    margin-left: 15px 
+
+.h4-ofertas
+    font-family: $font
+    margin: 10px 0 0 20px
+    font-size: 1.2rem
+
+h5
+    margin: 180px 260px 0 0
+
+.anuncios
+    height: 140px
+    width: 100vw
+
+#inicio-pagina
+    height: 50px
+    background: rgb(71, 91, 110)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    a
+        text-decoration: none
+        font-size: 12px
+        color: white
+        font-family: $font
+
+#footer1
+    .div-f1
+        width: 290px
+        background: rgb(52, 73, 92)
+    display: flex  
+    font-family: $font
+    a
+        text-decoration: none
+        font-size: 16px
+        gap: 30px
+        li
+            list-style: none
+            padding: 15px
+            color: white
+
+            
+
+            
+
+
+
+
+
+    
+    
+    
+
+
+        
+  
+    
+
+
+    
+     
+   
+
+    
+    
+    
+
+
+    
+
+    
+
+
+
+
+   
+
